@@ -30,5 +30,11 @@ class Printing{
         int d=10;
         System.out.printf("%5d",d);
 
+        System.out.println("***************************");
+
+        int x1=20;
+        float f=30.5f;
+        System.out.printf("%2$f   %1$d",x1,f);
+
     }
 }

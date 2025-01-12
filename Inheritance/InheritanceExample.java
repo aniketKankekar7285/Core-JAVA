@@ -1,34 +1,32 @@
-class Circle1{
-    public int radius;
+package Inheritance;
 
-    public Circle1()
-    {
-        radius=0;
+import java.lang.*;
+
+class Circle{
+    private double radius;
+    public Circle(){
+        radius=8.0;
     }
-
-    public Circle1(int r)
-    {
-        radius=r;
+    public double area(){
+       return 3.1428* radius*radius;
     }
-
-    public double getArea(){
-        return Math.PI*radius*radius;
-    }
-
-    public double getPerimetre(){
-        return Math.PI*radius*2;
-    }
-
-
-}
-
-class Cylinder1 extends Circle1{
-    private int height;
-
-    public double getVolume()
-    {
-          return getArea()*height;
+    public double perimeter(){
+       return 2* 3.1428 * radius;
     }
 }
-public class InheritanceExample {
+
+
+class Cylinder extends Circle{
+    private double height=10;
+   public double getVolume(){
+       return area()*height;
+   }
+}
+
+class InheritanceExample{
+    public static void main(String args[]){
+        Cylinder c1=new Cylinder();
+        System.out.println(c1.area());
+        System.out.println(c1.getVolume());
+    }
 }
